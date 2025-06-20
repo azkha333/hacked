@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>System Breach</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff00;
+      font-family: monospace;
+      padding: 20px;
+      font-size: 1.1em;
+    }
+
+    .terminal {
+      white-space: pre-line;
+      overflow-y: auto;
+      max-height: 100vh;
+    }
+  </style>
+</head>
+<body onload="startPrank()">
+  <div class="terminal" id="terminal">Loading...</div>
+
+  <script>
+    const terminal = document.getElementById("terminal");
+    const lines = [
+      "[+] azkha connected to 192.168.0.13:8080",
+      "[+] Performing handshake with target system...",
+      "[+] Firewall authentication bypassed [SUCCESS]",
+      "[+] Elevating privileges to root access...",
+      "[+] Injecting shellcode into memory sector 0x4FF21...",
+      "[+] Allocating 512MB for payload buffer...",
+      "[+] Payload encryption verified using AES-4096...",
+      "[+] Payload delivered successfully.",
+      "[+] Disabling system alerts and logs...",
+      "[+] Spoofing MAC address to evade detection...",
+      "[+] Extracting admin credentials from /etc/shadow...",
+      "[+] Brute-forcing encrypted passwords...",
+      "[+] Password cracked: admin:RootAccess2024!",
+      "[!] SYSTEM BREACH DETECTED.",
+      "[+] Establishing reverse shell to Wirefall server...",
+      "[+] Uploading sensitive files: banking.db, passwords.csv, notes.txt...",
+      "[+] Accessing camera and microphone...",
+      "[+] Capturing live feed from front camera...",
+      "[+] Cloning WhatsApp and social media data...",
+      "[+] Extracting browser history and saved passwords...",
+      "[+] Installing keylogger for future access...",
+      "[+] Encrypting local drives (C:/, D:/)...",
+      "[+] Injecting remote control protocol...",
+      "[+] Hiding trace logs from Event Viewer...",
+      "[+] Notifying central Wirefall command node...",
+      "[✓] Operation complete. Target fully compromised.",
+      "",
+    ];
+
+    let index = 0;
+
+    function showLine() {
+      if (index < lines.length) {
+        terminal.innerText += "\n" + lines[index];
+        index++;
+        setTimeout(showLine, 120); // DERES banget
+      }
+    }
+
+    function startPrank() {
+      alert(
+        "⚠️ WARNING:\n\nYour camera and microphone have been accessed.\n" +
+        "Private files and chats are being extracted in real-time.\n" +
+        "All activity is currently monitored.\n\n" +
+        "This is not a test.\n\n– azkha –"
+      );
+      terminal.innerText = "";
+      showLine();
+    }
+  </script>
+</body>
+</html>
+
